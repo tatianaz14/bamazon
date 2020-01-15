@@ -1,7 +1,7 @@
 var mysql = require("mysql");
 var inquirer = require("inquirer");
 var Table = require("cli-table");
-
+// Define the MySQL connection parameters
 var connection = mysql.createConnection({
 	host:"127.0.0.1",
 	port:3306,
@@ -32,7 +32,7 @@ var displayProducts = function(){
 		purchasePrompt();
 	});
 }
-
+// prompt purchasePrompt will prompt the user for the item/quantity they would like to purchase
 function purchasePrompt(){
 	inquirer.prompt([
 	{
